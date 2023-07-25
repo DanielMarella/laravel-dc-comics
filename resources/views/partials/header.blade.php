@@ -12,7 +12,7 @@
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="{{route('guest.home')}}">Homepage</a>
               <a class="nav-link" href="{{route('admin.comic.index')}}">Comics</a>
-              <a class="nav-link" href="#">Add New Comics</a>
+              <a class="nav-link" href="{{route('admin.comic.create')}}">Add New Comics</a>
             </div>
           </div>
         </div>
