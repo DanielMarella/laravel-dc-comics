@@ -24,6 +24,7 @@ Route::get('/comic',[GuestComicController::class,'index'])->name('guest.comic.in
 
 Route::get('admin/comics',[AdminComicController::class, 'index'])->name('admin.comic.index');
 Route::get('admin/comics/create', [AdminComicController::class, 'create'])->name('admin.comic.create');
+Route::post('comics', [AdminComicController::class, 'store'])->name('admin.comic.store');
 Route::get('admin/comics/{id}', [AdminComicController::class, 'show'])->name('admin.comic.show');
 
 

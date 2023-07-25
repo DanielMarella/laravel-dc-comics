@@ -12,7 +12,9 @@
     </h1>
     <div class="row">
         <div class="card col-12" >
-            <form>
+            <form action="{{route('admin.comic.store')}}" method="POST">
+            @csrf
+
                 <div class="mb-3">
                     <label for="title" class="form-label">
                         Title
