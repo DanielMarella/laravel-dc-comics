@@ -4,11 +4,12 @@
 
 @section('main-content')
 
-<h1>
-    Comic
-</h1>
+
 
 <div class="container">
+    <h1 class="mb-3">
+        Single Comic:
+    </h1>
     <div class="row">
         <div class="card col-12" >
             <img src="{{ $comic->thumb}}" class="card-img-top w-25" alt="...">
