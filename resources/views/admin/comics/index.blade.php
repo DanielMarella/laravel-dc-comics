@@ -59,7 +59,7 @@
                             {{ $comic->type}}
                         </td>
                         <td>
-                             <a class="btn btn-sm btn-primary">View</a>
+                             <a class="btn btn-sm btn-primary" href="{{route('admin.comic.show', $comic->id)}}">View</a>
                         </td>
 
 
