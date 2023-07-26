@@ -41,7 +41,7 @@ class ComicController extends Controller
         $newComic = new Comic();
         $newComic->fill($data);
         $newComic->save();
-        return redirect()->route('admin.comic.show',$newComic->id);
+        return redirect()->route('admin.comics.show',$newComic->id);
     }
 
     /**
@@ -64,7 +64,8 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
@@ -76,7 +77,10 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $comic = Comic::findOrFail($id);
+        $comic->update($data);
+        return redirect()->route('admin.comics.show', $comic->id);
     }
 
     /**
