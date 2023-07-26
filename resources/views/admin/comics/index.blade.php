@@ -61,8 +61,12 @@
                         <td>
                              <a class="btn btn-sm btn-primary" href="{{route('admin.comics.show', $comic->id)}}">View</a>
                              <a class="btn btn-sm btn-success" href="{{route('admin.comics.edit', $comic->id)}}">Edit</a>
-                             <a class="btn btn-sm btn-danger" href="{{route('admin.comics.show', $comic->id)}}">Remove</a>
 
+                             <form action="{{route('admin.comics.destroy', [ $comic->id ])}}" class="d-inline" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                 <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                             </form>
                         </td>
                     </tr>
                 </tbody>   
