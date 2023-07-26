@@ -8,7 +8,7 @@
 
 <div class="container">
     <h1 class="mb-3">
-        Single Comic:
+        Comic: {{ $comic->title}}
     </h1>
     <div class="row">
         <div class="card col-12" >
