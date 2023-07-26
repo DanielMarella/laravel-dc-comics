@@ -59,7 +59,10 @@
                             {{ $comic->type}}
                         </td>
                         <td>
-                             <a class="btn btn-sm btn-primary" href="{{route('admin.comic.show', $comic->id)}}">View</a>
+                             <a class="btn btn-sm btn-primary" href="{{route('admin.comics.show', $comic->id)}}">View</a>
+                             <a class="btn btn-sm btn-success" href="{{route('admin.comics.edit', $comic->id)}}">Edit</a>
+                             <a class="btn btn-sm btn-danger" href="{{route('admin.comics.show', $comic->id)}}">Remove</a>
+
                         </td>
                     </tr>
                 </tbody>   
