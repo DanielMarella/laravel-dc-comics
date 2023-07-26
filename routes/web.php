@@ -22,9 +22,14 @@ Route::get('/comic',[GuestComicController::class,'index'])->name('guest.comic.in
 
 
 
-Route::get('admin/comics',[AdminComicController::class, 'index'])->name('admin.comic.index');
-Route::get('admin/comics/create', [AdminComicController::class, 'create'])->name('admin.comic.create');
-Route::post('comics', [AdminComicController::class, 'store'])->name('admin.comic.store');
-Route::get('admin/comics/{id}', [AdminComicController::class, 'show'])->name('admin.comic.show');
+Route::get  ('admin/comics',             [AdminComicController::class, 'index' ])->name('admin.comics.index');
+Route::get  ('admin/comics/create',      [AdminComicController::class, 'create'])->name('admin.comics.create');
+Route::post ('comics',                   [AdminComicController::class, 'store' ])->name('admin.comics.store');
+Route::get  ('admin/comics/{id}',        [AdminComicController::class, 'show'  ])->name('admin.comics.show');
+Route::get  ('admin/comics/{id}/edit',   [AdminComicController::class, 'edit'  ])->name('admin.comics.edit');
+Route::put  ('admin/comics/{id}',        [AdminComicController::class, 'update'  ])->name('admin.comics.update');
+
+
+
 
 
